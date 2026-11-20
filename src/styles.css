@@ -166,8 +166,8 @@ a {
   text-align: center;
 }
 
-.pillars li:first-child {
-  width: 148px;
+.pillars li span:last-child {
+  white-space: nowrap;
 }
 
 .pillars__icon {
