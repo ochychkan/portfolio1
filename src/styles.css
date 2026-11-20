@@ -6,14 +6,6 @@
   --button: #6d3ab0;
 }
 
-:root[data-theme="light"] {
-  --bg: #f3ecfb;
-  --panel: rgba(247, 238, 229, 0.78);
-  --text: #2a1650;
-  --accent: #6d3ab0;
-  --button: #6d3ab0;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -92,9 +84,6 @@ a {
   align-items: center;
   gap: 8px;
   padding: 0;
-  border: 0;
-  background: none;
-  cursor: pointer;
 }
 
 .hero__card {

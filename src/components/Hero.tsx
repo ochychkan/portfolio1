@@ -1,4 +1,3 @@
-import { useState } from "react";
 import heroBg from "../assets/hero-bg.png";
 import wave from "../assets/wave.svg";
 import waveLine from "../assets/wave-line.svg";
@@ -12,14 +11,6 @@ import community from "../assets/community.svg";
 import care from "../assets/care.svg";
 
 export default function Hero() {
-  const [theme, setTheme] = useState<"dark" | "light">("dark");
-
-  const toggleTheme = () => {
-    const next = theme === "dark" ? "light" : "dark";
-    setTheme(next);
-    document.documentElement.dataset.theme = next;
-  };
-
   return (
     <section className="hero">
       <img className="hero__bg" src={heroBg} alt="" />
@@ -34,15 +25,11 @@ export default function Hero() {
           <a href="#projects">Projects</a>
           <a href="#contacts">Contacts</a>
         </nav>
-        <button
-          type="button"
-          className="header__theme"
-          onClick={toggleTheme}
-          aria-label="Toggle light / dark theme"
-        >
+        {/* TODO: theme switching is disabled until the light-theme design is ready */}
+        <div className="header__theme" aria-hidden="true">
           <img src={sun} alt="" width={24} height={24} />
           <img src={toggle} alt="" width={39} height={39} />
-        </button>
+        </div>
       </header>
 
       <div className="hero__card">
