@@ -14,7 +14,6 @@ export default function Hero() {
   return (
     <section className="hero">
       <img className="hero__bg" src={heroBg} alt="" />
-      <img className="hero__wave" src={wave} alt="" />
 
       <header className="header">
         <nav className="header__nav">
@@ -55,25 +54,32 @@ export default function Hero() {
         </a>
       </div>
 
-      <img className="hero__line" src={waveLine} alt="" />
+      {/* Fog, line and pillars live in one box that scales with the page width,
+          so they always keep their position relative to each other. */}
+      <div className="hero__bottom">
+        <img className="hero__wave" src={wave} alt="" />
+        <div className="hero__line">
+          <img src={waveLine} alt="" />
+        </div>
 
-      <ul className="pillars">
-        <li>
-          <span className="pillars__icon">
-            <img src={blobBrain} alt="" className="pillars__blob" />
-            <img src={brain} alt="" className="pillars__glyph" />
-          </span>
-          <span>Mental wellness</span>
-        </li>
-        <li>
-          <img src={community} alt="" className="pillars__icon" />
-          <span>Community</span>
-        </li>
-        <li>
-          <img src={care} alt="" className="pillars__icon" />
-          <span>User Care</span>
-        </li>
-      </ul>
+        <ul className="pillars">
+          <li>
+            <span className="pillars__icon">
+              <img src={blobBrain} alt="" className="pillars__blob" />
+              <img src={brain} alt="" className="pillars__glyph" />
+            </span>
+            <span>Mental wellness</span>
+          </li>
+          <li>
+            <img src={community} alt="" className="pillars__icon" />
+            <span>Community</span>
+          </li>
+          <li>
+            <img src={care} alt="" className="pillars__icon" />
+            <span>User Care</span>
+          </li>
+        </ul>
+      </div>
     </section>
   );
 }
